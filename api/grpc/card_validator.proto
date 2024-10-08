@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package grpc;
+
+option go_package = "./grpc";
+
+service CardValidatorService {
+  rpc Validate(Card) returns(ValidateResult) {}
+}
+
+message Card {
+  string number = 1;
+  string month = 2;
+  string year = 3;
+}
+
+message ValidateResult {
+  bool valid = 1;
+  optional Error error = 2;
+}
+
+message Error {
+  int32 code = 1;
+  string message = 2;
+}
