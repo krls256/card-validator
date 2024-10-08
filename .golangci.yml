@@ -1,0 +1,105 @@
+linters-settings:
+  dogsled:
+    max-blank-identifiers: 2
+  dupl:
+    threshold: 200
+  errcheck:
+    check-type-assertions: true
+    check-blank: true
+  funlen:
+    lines: 90
+    statements: 40
+  gocognit:
+    min-complexity: 13
+  nestif:
+    min-complexity: 6
+  goconst:
+    min-len: 3
+    min-occurrences: 3
+  gocyclo:
+    min-complexity: 10
+  godot:
+    check-all: false
+    exclude:
+      - "^@*"
+  godox:
+    keywords:
+      - FIXME
+      - BUG
+      - TODO
+  gofmt:
+    simplify: true
+  lll:
+    line-length: 140
+  misspell:
+    locale: US
+  nakedret:
+    max-func-lines: 30
+  prealloc:
+    simple: true
+    range-loops: true
+    for-loops: false
+  nolintlint:
+    allow-unused: false
+    allow-no-explanation: [ ]
+    require-explanation: true
+    require-specific: true
+  unparam:
+    check-exported: false
+  unused:
+
+  whitespace:
+    multi-if: false
+    multi-func: false
+  wsl:
+    strict-append: true
+    allow-assign-and-call: true
+    allow-multiline-assign: true
+    allow-cuddle-declarations: false
+    allow-trailing-comment: false
+    force-case-trailing-whitespace: 0
+    force-err-cuddling: false
+    allow-separated-leading-comment: false
+
+linters:
+  disable-all: true
+  enable:
+    - govet
+    - errcheck
+    - staticcheck
+    - unused
+    - gosimple
+    - structcheck
+    - ineffassign
+    - typecheck
+    - bodyclose
+    - noctx
+    - stylecheck
+    - rowserrcheck
+    - gosec
+    - interfacer
+    - unconvert
+    - dupl
+    - goconst
+    - gocyclo
+    - gocognit
+    - asciicheck
+    - misspell
+    - lll
+    - unparam
+    - dogsled
+    - nakedret
+    - prealloc
+    - gocritic
+    - godox
+    - funlen
+    - whitespace
+    - wsl
+    - goprintffuncname
+    - godot
+    - nestif
+    - exportloopref
+    - sqlclosecheck
+    - nlreturn
+    - nolintlint
+    - gofmt
