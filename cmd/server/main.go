@@ -43,5 +43,8 @@ func main() {
 
 	<-utils.WaitTermSignal()
 
+	httpServer.Shutdown(context.Background())
+	grpcServer.Shutdown()
+
 	slog.Info("shutdown", slog.Duration("server was running for", time.Since(now)))
 }
